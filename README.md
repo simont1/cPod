@@ -29,4 +29,5 @@ The New Music Library
 - [x] A makefile that will compile all the parts of your code and generate a single executable program
 
 ## Git clone link:
-- [https://github.com/mks65/my_tunez.git]
+- https://github.com/mks65/my_tunez.git
+- [ ] Link submodule
