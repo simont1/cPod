@@ -17,7 +17,6 @@ struct song_node * insert_front(struct song_node * l_list, char *_name, char *_a
   new->next = l_list;
   return new;
   
-  
 }
 
 struct song_node * free_list(struct song_node * l_list){
