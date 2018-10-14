@@ -6,7 +6,7 @@ int main(){
 
   char *s_1 = "no women no cry";
   char *a_1 = "bob marley";
-  struct node * p_test_1 = insert_front(0, s_1, a_1);
+  struct song_node * p_test_1 = insert_front(0, s_1, a_1);
 
   char *s_2 = "blackbird";
   char *a_2 = "beetles";
@@ -25,13 +25,17 @@ int main(){
   p_test_1 = insert_front(p_test_1, s_5, a_5);
 
 
-  printf("LINKED LIST TESTS\n====================================\n");
+  printf("LINKED LIST TESTS\n====================================\n\n");
+  printf("Testing print_list:\n");
   print_list(p_test_1);
-  printf("\n");
+  printf("\n====================================\n\n");
 
+  printf("Testing print_node:\n");
+  print_node(p_test_1);
+  printf("\n====================================\n\n");
 
-  printf("CLEARING Linked List\n");
-  p_test_1 = free_list(p_test_1);
+  //printf("CLEARING Linked List\n");
+  //p_test_1 = free_list(p_test_1);
 
   print_list(p_test_1);
   printf("%p\n", p_test_1);
