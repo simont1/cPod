@@ -5,7 +5,7 @@ The New Music Library
 
 ### Linked Lists
 - [x] insert nodes at the front
-- [ ] insert nodes in order &rarr alphabetical by Artist then by Song
+- [ ] insert nodes in order ==> alphabetical by Artist then by Song
 - [x] print the entire list
 - [ ] find and return a pointer to a node based on artist and song name
 - [ ] find and return a pointer to the first song of an artist based on artist name
