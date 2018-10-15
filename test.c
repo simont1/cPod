@@ -11,7 +11,7 @@ int main(){
   char *s_2 = "blackbird";
   char *a_2 = "beetles";
   p_test_1 =  insert_node_alpha(p_test_1, s_2, a_2);
-  
+
   /* char *s_21 = "dolly"; */
   /* char *a_21 = "beetles"; */
   /* p_test_1 =  insert_node_alpha(p_test_1, s_21, a_21); */
@@ -39,12 +39,28 @@ int main(){
   /* printf("\n====================================\n\n"); */
 
 
-  
+
   //printf("CLEARING Linked List\n");
   //p_test_1 = free_list(p_test_1);
 
   /* print_list(p_test_1); */
   /* printf("%p\n", p_test_1); */
-  
+  struct song_node * result = searchSpecific(p_test_1, s_3, a_3);
+  printf("Resulting memory location of search: %p\n", result);
+  printf("Song: %s\n", result->name);
+  printf("Artist: %s\n", result->artist);
+
+  struct song_node * result2 = searchSpecific(p_test_1, "apple", "banana");
+  printf("%p\n", result2);
+  printf("%s\n", result2->name);
+  printf("%s\n\n", result2->artist);
+
+  struct song_node * firstSong = searchFirst(p_test_1, a_2);
+  printf("Resulting memory location of search: %p\n", firstSong);
+  printf("Song: %s\n", firstSong->name);
+  printf("Artist: %s\n", firstSong->artist);
+
+
+
   return 0;
 }
