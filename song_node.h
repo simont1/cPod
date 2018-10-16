@@ -13,3 +13,5 @@ struct song_node * searchSpecific(struct song_node * l_list, char *_name, char *
 struct song_node * searchFirst(struct song_node * l_list, char * _artist);
 struct song_node * selectRandomNode();
 int length(struct song_node * start);
+void * removeNode(struct song_node * l_list, char * _artist);
+int songcmp(struct song_node * one, struct song_node * two);

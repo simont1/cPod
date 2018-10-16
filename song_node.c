@@ -76,6 +76,10 @@ struct song_node * searchFirst(struct song_node *l_list, char *_artist){
   return temp;
 }
 
+int songcmp(struct song_node * one, struct song_node * two){
+  return strcmp(one->artist, two->artist) + strcmp(one->name, two->name);
+}
+
 struct song_node * selectRandomNode(struct song_node * start){
 
   int len = length(start);
@@ -87,15 +91,13 @@ struct song_node * selectRandomNode(struct song_node * start){
   }
 
   return start;
-  
-
-  
 }
 
 int length(struct song_node * start){
   int count = 0;
   while(start){
     count++;
+    printf("%d\n", songcmp(start, start->next));
     start=start->next;
   }
   return count;

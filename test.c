@@ -5,12 +5,12 @@
 int main(){
   srand(time(NULL));
 
-  char *s_1 = "no women no cry";
-  char *a_1 = "bob marley";
+  char *s_1 = "pink floyd";
+  char *a_1 = "time";
   struct song_node * p_test_1 =  insert_front(0, s_1, a_1);
   
-  char *s_2 = "blackbird";
-  char *a_2 = "beetles";
+  char *s_2 = "pearl jam";
+  char *a_2 = "even flow";
   p_test_1 =  insert_front(p_test_1, s_2, a_2);
 
   
