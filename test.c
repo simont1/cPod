@@ -29,12 +29,12 @@ int main(){
   /* char *s_5 = "crys from CS kids"; */
   /* char *a_5 = "debugging"; */
   /* p_test_1 = insert_front(p_test_1, s_5, a_5); */
-  print_list(p_test_1);
-  printf("\n\n");
-  removeNode(p_test_1, s_2, a_2);
-  printf("\n\n");
+  /* print_list(p_test_1); */
+  /* printf("\n\n"); */
+  /* removeNode(p_test_1, s_2, a_2); */
+  /* printf("\n\n"); */
 
-  print_list(p_test_1);
+  /* print_list(p_test_1); */
 
   /* printf("LINKED LIST TESTS\n====================================\n\n"); */
   /* printf("Testing print_list:\n"); */
