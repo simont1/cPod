@@ -30,4 +30,4 @@ The New Music Library
 
 ## Git clone link:
 - https://github.com/mks65/my_tunez.git
-- [ ] Link submodule
+- [x] Link submodule
