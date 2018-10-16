@@ -1,3 +1,5 @@
+#ifndef SONG_NODE_H
+#define FOO_H
 struct song_node{
   char name[100];
   char artist[100];
@@ -15,3 +17,5 @@ struct song_node * selectRandomNode();
 int length(struct song_node * start);
 void removeNode(struct song_node * l_list, char * _artist, char *_name);
 int songcmp(struct song_node * one, struct song_node * two);
+
+#endif

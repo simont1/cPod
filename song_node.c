@@ -31,26 +31,34 @@ struct song_node * free_list(struct song_node * l_list){
     free(curr);
     curr = nx;
   }
-
+  
   return curr;
 
 }
 
 struct song_node * insert_node_alpha(struct song_node * l_list, char *_name, char *_artist){
 
-  struct song_node *new =  malloc(sizeof(struct song_node));
+  struct song_node *new = malloc(sizeof(struct song_node));
   strcpy(new->name, _name);
   strcpy(new->artist, _artist);
+  new->next = new;
   struct song_node *curr = l_list;
+  struct song_node *prev = l_list;
 
   while(curr->next && strcmp(_artist, curr->artist) > 0){
-    curr = curr->next;
+    prev->next= new->next;
+    new->next = curr->next;
+    curr=curr->next;
   }
 
   while(curr->next && strcmp(_artist, curr->artist) == 0 && strcmp(_name, curr->name) > 0){
+    prev->next= new->next;
+    new->next = curr->next;
     curr=curr->next;
   }
-  return NULL;
+
+  print_list(l_list);
+  return l_list;
   
 }
 
@@ -86,7 +94,7 @@ void removeNode(struct song_node * l_list, char * _artist, char *_name){
   strcpy(test->artist, _artist);
   strcpy(test->name, _name);
   while(l_list && songcmp(l_list, test) != 0){
-    printf("%s\n",test);
+    //printf("%s\n",test);
     prev = l_list;
     l_list = l_list->next;
   }
