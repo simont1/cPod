@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "song_node.h"
-
 int main(){
+  srand(time(NULL));
 
   char *s_1 = "no women no cry";
   char *a_1 = "bob marley";
@@ -25,10 +26,11 @@ int main(){
   char *a_4 = "toto";
   p_test_1 =  insert_front(p_test_1, s_4, a_4);
 
-  char *s_5 = "crys from CS kids";
-  char *a_5 = "debugging";
-  p_test_1 = insert_front(p_test_1, s_5, a_5);
+  /* char *s_5 = "crys from CS kids"; */
+  /* char *a_5 = "debugging"; */
+  /* p_test_1 = insert_front(p_test_1, s_5, a_5); */
 
+  print_node(selectRandomNode(p_test_1));
 
   printf("LINKED LIST TESTS\n====================================\n\n");
   printf("Testing print_list:\n");

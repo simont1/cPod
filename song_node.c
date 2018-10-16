@@ -76,9 +76,21 @@ struct song_node * searchFirst(struct song_node *l_list, char *_artist){
   return temp;
 }
 
-/* struct song_node * selectRandomNode(){ */
+struct song_node * selectRandomNode(struct song_node * start){
+
+  int len = length(start);
+  int rand_num = rand();
+  rand_num = (rand_num % (len+1));
+  while(rand_num){
+    start = start->next;
+    rand_num -= 1;
+  }
+
+  return start;
   
-/* } */
+
+  
+}
 
 int length(struct song_node * start){
   int count = 0;
