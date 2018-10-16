@@ -50,7 +50,7 @@ struct song_node * insert_node_alpha(struct song_node * l_list, char *_name, cha
   while(curr->next && strcmp(_artist, curr->artist) == 0 && strcmp(_name, curr->name) > 0){
     curr=curr->next;
   }
-
+  return NULL;
   
 }
 
@@ -74,4 +74,17 @@ struct song_node * searchFirst(struct song_node *l_list, char *_artist){
     temp = temp->next;
   }
   return temp;
+}
+
+/* struct song_node * selectRandomNode(){ */
+  
+/* } */
+
+int length(struct song_node * start){
+  int count = 0;
+  while(start){
+    count++;
+    start=start->next;
+  }
+  return count;
 }

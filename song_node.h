@@ -11,3 +11,5 @@ struct song_node * insert_node_alpha(struct song_node * l_list, char *_name, cha
 void print_node(struct song_node *l_list);
 struct song_node * searchSpecific(struct song_node * l_list, char *_name, char *_artist);
 struct song_node * searchFirst(struct song_node * l_list, char * _artist);
+struct song_node * selectRandomNode();
+int length(struct song_node * start);
