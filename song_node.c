@@ -80,6 +80,29 @@ int songcmp(struct song_node * one, struct song_node * two){
   return strcmp(one->artist, two->artist) + strcmp(one->name, two->name);
 }
 
+void removeNode(struct song_node * l_list, char * _artist, char *_name){
+  struct song_node *test;
+  struct song_node *prev = l_list; 
+  strcpy(test->artist, _artist);
+  strcpy(test->name, _name);
+  while(l_list && songcmp(l_list, test) != 0){
+    printf("%s\n",test);
+    prev = l_list;
+    l_list = l_list->next;
+  }
+  
+  if(l_list == NULL){
+    printf("%s - %s not found", _artist, _name);
+  }
+  else{
+    //printf("%s,%s\n", prev, prev->next);
+    prev -> next = l_list->next;
+    free(l_list);
+    free(test);
+  }
+
+}
+
 struct song_node * selectRandomNode(struct song_node * start){
 
   int len = length(start);
