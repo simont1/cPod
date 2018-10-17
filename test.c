@@ -7,32 +7,37 @@ int main(){
 
   char *s_1 = "time";
   char *a_1 = "pink floyd";
-  struct song_node * p_test_1 =  insert_front(0, s_1, a_1);
+  struct song_node * p_test_1 =  insert_node_alpha(0, s_1, a_1);
+  print_list(p_test_1);
   
   char *s_2 = "even flow";
   char *a_2 = "pearl jam";
-  insert_node_alpha(p_test_1, s_2, a_2);
-
-  p_test_1 =  insert_front(p_test_1, s_2, a_2);
+  
+  p_test_1 = insert_node_alpha(p_test_1, s_2, a_2);
+  print_list(p_test_1);
+  //p_test_1 =  insert_front(p_test_1, s_2, a_2);
 
   
   char *s_21 = "dolly";
   char *a_21 = "beetles";
-  insert_node_alpha(p_test_1, s_21, a_21);
+  //insert_node_alpha(p_test_1, s_21, a_21);
 
-  p_test_1 =  insert_front(p_test_1, s_21, a_21);
+  p_test_1 =  insert_node_alpha(p_test_1, s_21, a_21);
+  print_list(p_test_1);
 
   char *s_3 = "september";
   char *a_3 = "earth wind fire";
-  insert_node_alpha(p_test_1, s_3, a_3);
+  //insert_node_alpha(p_test_1, s_3, a_3);
 
-  p_test_1 =  insert_front(p_test_1, s_3, a_3);
+  p_test_1 =  insert_node_alpha(p_test_1, s_3, a_3);
+  print_list(p_test_1);
 
-  char *s_4 = "africa";
-  char *a_4 = "toto";
-  insert_node_alpha(p_test_1, s_4, a_4);
+  char *s_4 = "september";
+  char *a_4 = "beetles";
+  //insert_node_alpha(p_test_1, s_4, a_4);
 
-  p_test_1 =  insert_front(p_test_1, s_4, a_4);
+  p_test_1 =  insert_node_alpha(p_test_1, s_4, a_4);
+  print_list(p_test_1);
 
   /* char *s_5 = "crys from CS kids"; */
   /* char *a_5 = "debugging"; */
