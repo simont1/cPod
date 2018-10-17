@@ -12,6 +12,7 @@ void print_list(struct song_node * l_list){
     print_node(l_list);
     l_list = l_list -> next;
   }
+  printf("\n");
 }
 
 struct song_node * insert_front(struct song_node * l_list, char *_name, char *_artist){

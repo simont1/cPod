@@ -2,8 +2,13 @@
 #include <stdlib.h>
 #include <time.h>
 #include "song_node.h"
+#include "library.h"
+
 int main(){
   srand(time(NULL));
+
+  struct song_node * table[27];
+  insert_front(table[0], "a", "a");
 
   char *s_1 = "time";
   char *a_1 = "pink floyd";
@@ -75,7 +80,7 @@ int main(){
   /* printf("Song: %s\n", firstSong->name); */
   /* printf("Artist: %s\n", firstSong->artist); */
 
-
+  
 
   return 0;
 }
