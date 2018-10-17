@@ -62,12 +62,13 @@ struct song_node * insert_node_alpha(struct song_node * l_list, char *_name, cha
     new->next = curr;
     curr=curr->next;
   }
+  
   prev->next = new;
   new->next = curr;
   return l_list;
   
 }
-
+`
 struct song_node * searchSpecific(struct song_node *l_list, char *_name, char *_artist){
   struct song_node *temp = l_list;
   while(temp){
