@@ -8,7 +8,9 @@ int main(){
   srand(time(NULL));
 
   struct song_node * table[27];
-  insert_front(table[0], "a", "a");
+  table[0] = insert_front(0, "a", "a");
+  print_list(table[0]);
+  printf("=================================\n");
 
   char *s_1 = "time";
   char *a_1 = "pink floyd";
