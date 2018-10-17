@@ -7,24 +7,21 @@
 int main(){
   srand(time(NULL));
 
-  struct song_node * table[27];
-  table[0] = insert_front(0, "a", "a");
-  print_list(table[0]);
-  printf("=================================\n");
+
 
   char *s_1 = "time";
   char *a_1 = "pink floyd";
   struct song_node * p_test_1 =  insert_node_alpha(0, s_1, a_1);
   print_list(p_test_1);
-  
+
   char *s_2 = "even flow";
   char *a_2 = "pearl jam";
-  
+
   p_test_1 = insert_node_alpha(p_test_1, s_2, a_2);
   print_list(p_test_1);
   //p_test_1 =  insert_front(p_test_1, s_2, a_2);
 
-  
+
   char *s_21 = "dolly";
   char *a_21 = "beetles";
   //insert_node_alpha(p_test_1, s_21, a_21);
@@ -87,7 +84,14 @@ int main(){
   /* printf("Song: %s\n", firstSong->name); */
   /* printf("Artist: %s\n", firstSong->artist); */
 
-  
+  printf("=================================\n");
+  struct song_node * table[27];
+  table[0] = insert_node_alpha(0, "A", "A");
+  // int a1 = idLetter(a_1);
+  // int a2 = idLetter(a_2);
+  table[0] = addSong(table[0], p_test_1);
+  print_list(table[0]);
+  //print_library(table);
 
   return 0;
 }
