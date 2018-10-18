@@ -93,11 +93,19 @@ int main(){
 
   printf("=================================\n");
   struct song_node * table[27];
-  table[0] = insert_node_alpha(0, "A", "A");
+  int i = 26;
+  while(i >= 0){
+    table[i] = insert_node_alpha(0, NULL, NULL);
+
+  }
+  
+  //table[0] = insert_node_alpha(0, NULL, NULL);
+  
+
+  
   // int a1 = idLetter(a_1);
   // int a2 = idLetter(a_2);
-  table[0] = addSong(table[0], p_test_1);
-  print_list(table[0]);
+
   //print_library(table);
 
   return 0;
