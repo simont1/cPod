@@ -36,7 +36,7 @@ int main(){
   p_test_1 =  insert_node_alpha(p_test_1, s_3, a_3);
   print_list(p_test_1);
 
-  char *s_4 = "september";
+  char *s_4 = "dolly";
   char *a_4 = "beetles";
   //insert_node_alpha(p_test_1, s_4, a_4);
 
@@ -44,11 +44,9 @@ int main(){
   print_list(p_test_1);
 
   p_test_1 =  removeNode(p_test_1, a_1, s_1);
-  printf("%p\n\n", p_test_1);
     
   print_list(p_test_1);
 
-  printf("SSSSSSSSSSSSSSSSSSSSSSSSSSSSS\n\n");
   
   /* char *s_5 = "crys from CS kids"; */
   /* char *a_5 = "debugging"; */
@@ -94,19 +92,25 @@ int main(){
   printf("=================================\n");
   struct song_node * table[27];
   int i = 26;
-  while(i >= 0){
-    table[i] = insert_node_alpha(0, NULL, NULL);
+  char c =  1 + '0';
+  char *alpha = &c;
+  table[0] = insert_node_alpha(0, alpha, alpha);
+  while(i > 0){
+    c =  i + '0';
+    alpha = &c;
 
+    table[i] = insert_node_alpha(table[i-1], alpha, alpha);
+    i-=1;
   }
-  
+
   //table[0] = insert_node_alpha(0, NULL, NULL);
-  
+
 
   
   // int a1 = idLetter(a_1);
   // int a2 = idLetter(a_2);
 
-  //print_library(table);
+  print_library(table);
 
   return 0;
 }

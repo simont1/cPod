@@ -12,6 +12,7 @@ The New Music Library
 - [x] Return a pointer to random element in the list.
 - [x] remove a single specified node from the list
 - [x] free the entire list
+
 ### Array of Linked List
 - [ ] Add song nodes.
 - [ ] Search for a song given song and artist name (return a pointer).

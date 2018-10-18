@@ -23,8 +23,13 @@ int idLetter(char *_artist){
 
 
 
-/*void print_library(struct song_node **lib){
+void print_library(struct song_node **lib){
   for (int i = 0; i < 27; i++){
-    print_list(lib[i]);
+    if(lib[i]){
+      print_list(lib[i]);
+    }
+    else{
+      printf("No songs found for Artist Names starting with %c", i+'0');
+    }
   }
-}*/
+}
