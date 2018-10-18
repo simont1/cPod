@@ -95,19 +95,33 @@ int songcmp(struct song_node * one, struct song_node * two){
   return strcmp(one->artist, two->artist) + strcmp(one->name, two->name);
 }
 
-void removeNode(struct song_node * l_list, char * _artist, char *_name){
-  /* struct song_node *prev = l_list; */
-  /* struct song_node *next = l_list; */
-  
-  /* while(l_list){ */
-  /*   prev = l_list; */
-  /*   next = l_list->next; */
-    
-  /*   if(strcmp(_artist, l_list->artist) == 0 && strcmp(_name, l_list->name) == 0){ */
-      
-  /*   } */
-    
-  /* } */
+struct song_node * removeNode(struct song_node * l_list, char * _artist, char *_name){
+
+  struct song_node *start = l_list;
+  struct song_node *new;
+
+
+  //printf("%s, %s, %s, %s", l_list->artist, _artist, l_list->name, _name);
+  if(strcmp(l_list->artist, _artist) == 0 && (strcmp(l_list->name, _name) == 0)){
+    new = l_list->next;
+    free(l_list);
+    //printf("SDSDS\n\n\n");
+    return new;
+  }
+
+  while(l_list && (strcmp(l_list->artist, _artist) != 0 || (strcmp(l_list->name, _name) != 0))){
+    new = l_list;
+    l_list = l_list->next;
+  }
+
+  if(l_list){
+    new->next = l_list->next;
+    free(l_list);
+  }
+  else{
+    return NULL;
+  }
+  return start;
   
   
 }

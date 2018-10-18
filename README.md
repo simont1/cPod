@@ -10,7 +10,7 @@ The New Music Library
 - [x] find and return a pointer to a node based on artist and song name
 - [x] find and return a pointer to the first song of an artist based on artist name
 - [x] Return a pointer to random element in the list.
-- [ ] remove a single specified node from the list
+- [x] remove a single specified node from the list
 - [x] free the entire list
 ### Array of Linked List
 - [ ] Add song nodes.

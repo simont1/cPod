@@ -43,6 +43,13 @@ int main(){
   p_test_1 =  insert_node_alpha(p_test_1, s_4, a_4);
   print_list(p_test_1);
 
+  p_test_1 =  removeNode(p_test_1, a_1, s_1);
+  printf("%p\n\n", p_test_1);
+    
+  print_list(p_test_1);
+
+  printf("SSSSSSSSSSSSSSSSSSSSSSSSSSSSS\n\n");
+  
   /* char *s_5 = "crys from CS kids"; */
   /* char *a_5 = "debugging"; */
   /* p_test_1 = insert_front(p_test_1, s_5, a_5); */
