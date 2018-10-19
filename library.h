@@ -1,8 +1,15 @@
 #ifndef LIBRARY_H
 #define FOO_H
 
-//void print_library(struct song_node **lib);
-struct song_node * addSong(struct song_node * lib, struct song_node *insertee);
+struct song_node *table[27];
+void addSong(char *_song, char *_artist);
 int idLetter(char *_artist);
-void print_library(struct song_node **lib);
+void print_library();
+void removeSong(char *_song, char *_artist);
+void print_letter(char *s);
+void printArtist(char *_artist);
+struct song_node * finder(char *_song, char*_artist);
+struct song_node * artistFinder(char *_artist);
+void shuffle();
+void clear_library();
 #endif

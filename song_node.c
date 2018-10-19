@@ -4,7 +4,12 @@
 #include "song_node.h"
 
 void print_node(struct song_node *l_list){
-  printf("%s: %s |", l_list->artist, l_list->name);
+  if(l_list){
+    printf("%s: %s |", l_list->artist, l_list->name);
+  }
+  else{
+    printf("Not found");
+  }
 }
 
 void print_list(struct song_node * l_list){
@@ -32,7 +37,7 @@ struct song_node * free_list(struct song_node * l_list){
     free(curr);
     curr = nx;
   }
-  
+
   return curr;
 
 }
@@ -42,12 +47,12 @@ struct song_node * insert_node_alpha(struct song_node * l_list, char *_name, cha
 
     return insert_front(l_list, _name, _artist);
   }
-  
+
   struct song_node *new = malloc(sizeof(struct song_node));
   strcpy(new->name, _name);
   strcpy(new->artist, _artist);
 
-  
+
   struct song_node *curr = l_list->next;
   struct song_node *prev = l_list;
 
@@ -62,11 +67,11 @@ struct song_node * insert_node_alpha(struct song_node * l_list, char *_name, cha
     new->next = curr;
     curr=curr->next;
   }
-  
+
   prev->next = new;
   new->next = curr;
   return l_list;
-  
+
 }
 
 struct song_node * searchSpecific(struct song_node *l_list, char *_name, char *_artist){
@@ -122,8 +127,8 @@ struct song_node * removeNode(struct song_node * l_list, char * _artist, char *_
     return NULL;
   }
   return start;
-  
-  
+
+
 }
 
 struct song_node * selectRandomNode(struct song_node * start){
@@ -148,5 +153,3 @@ int length(struct song_node * start){
   }
   return count;
 }
-
-
