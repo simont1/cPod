@@ -5,16 +5,11 @@
 #include "song_node.h"
 
 
-struct song_node * addSong(struct song_node * lib, struct song_node *insertee){
-  struct song_node * temp = lib;
-  // int x = idLetter(insertee->artist);
-  // char *s = "a" + x; THIS DOESNT WORK HARD CODE THIS BY INITING ALL 27 LISTS
-  // temp = insert_front(temp, s, s);
-  while(insertee){
-    temp = insert_node_alpha(temp, insertee->name, insertee->artist);
-    insertee = insertee->next;
-  }
-  return temp;
+struct song_node * addSong(struct song_node **_table, char * _artist, char *_name){
+  char start = _artist[0];
+  int pos = start - 97;
+
+  return insert_node_alpha(_table[pos], _artist, _name);
 }
 
 int idLetter(char *_artist){

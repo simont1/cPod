@@ -90,27 +90,18 @@ int main(){
   /* printf("Artist: %s\n", firstSong->artist); */
 
   printf("=================================\n");
-  struct song_node * table[27];
-  int i = 26;
-  char c =  1 + '0';
-  char *alpha = &c;
-  table[0] = insert_node_alpha(0, alpha, alpha);
-  while(i > 0){
-    c =  i + '0';
-    alpha = &c;
+  struct song_node * table[26];
 
-    table[i] = insert_node_alpha(table[i-1], alpha, alpha);
-    i-=1;
-  }
+  addSong(table, "zpple", "cake");
 
-  //table[0] = insert_node_alpha(0, NULL, NULL);
+  table[0] = insert_node_alpha(0, "pie", "cake");
 
 
   
   // int a1 = idLetter(a_1);
   // int a2 = idLetter(a_2);
 
-  print_library(table);
+  print_list(table[0]);
 
   return 0;
 }
