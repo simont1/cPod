@@ -34,6 +34,7 @@ struct song_node * free_list(struct song_node * l_list){
 
   while (curr){
     struct song_node *nx= curr->next;
+    printf("Freeing artist: %s, song: %s\n", curr->artist, curr->name);
     free(curr);
     curr = nx;
   }
@@ -135,7 +136,7 @@ struct song_node * selectRandomNode(struct song_node * start){
 
   int len = length(start);
   int rand_num = rand();
-  rand_num = (rand_num % (len+1));
+  rand_num = (rand_num % (len));
   while(rand_num){
     start = start->next;
     rand_num -= 1;
@@ -148,7 +149,6 @@ int length(struct song_node * start){
   int count = 0;
   while(start){
     count++;
-    printf("%d\n", songcmp(start, start->next));
     start=start->next;
   }
   return count;
