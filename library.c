@@ -43,7 +43,21 @@ void findArtist(struct song_node **_table, char * _artist){
   printf("Artist Not Found!\n");
 }
 
+struct song_node * findSong(struct song_node **_table, char * _artist, char *_name){
+  char start = _artist[0];
+  int pos = start - 97;
 
+  if(!(pos >= 0 && pos < 26)){
+    pos=26;
+  }
+  struct song_node * song = searchSpecific(_table[pos], _name, _artist);
+
+  if(song){
+    return song;
+  }
+  printf("Song not found");
+  return song;
+}
 
 void print_library(struct song_node **lib){
   for (int i = 0; i < 27; i++){

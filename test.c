@@ -97,6 +97,10 @@ int main(){
 
   findArtist(table, "aie");
   printf("\n");
+
+  print_node(findSong(table, "aie", "cake"));
+
+  printf("\n");
   
   // int a1 = idLetter(a_1);
   // int a2 = idLetter(a_2);

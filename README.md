@@ -14,9 +14,9 @@ The New Music Library
 - [x] free the entire list
 
 ### Array of Linked List
-- [ ] Add song nodes.
-- [ ] Search for a song given song and artist name (return a pointer).
-- [ ] Search for an artist.
+- [X] Add song nodes.
+- [x] Search for a song given song and artist name (return a pointer).
+- [X] Search for an artist.
 - [ ] Print out all the entries under a certain letter.
 - [ ] Print out all the songs of a certain artist
 - [ ] Print out the entire library.
