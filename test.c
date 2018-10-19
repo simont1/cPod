@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -94,12 +95,13 @@ int main(){
 
   addSong(table, "aie", "cake");
 
-
+  findArtist(table, "aie");
+  printf("\n");
   
   // int a1 = idLetter(a_1);
   // int a2 = idLetter(a_2);
 
-  print_list(table[0]);
+  //print_list(table[0]);
 
   return 0;
 }

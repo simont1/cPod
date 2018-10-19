@@ -12,13 +12,35 @@ struct song_node ** addSong(struct song_node **_table, char * _artist, char *_na
   if(!(pos >= 0 && pos < 26)){
     pos=26;
   }
-  _table[pos] =  insert_node_alpha(_table[pos], _artist, _name);
+  _table[pos] =  insert_node_alpha(_table[pos], _name, _artist);
   
   return NULL;
 }
 
 int idLetter(char *_artist){
   return strcmp(_artist, "a");
+}
+
+
+void findArtist(struct song_node **_table, char * _artist){
+  char start = _artist[0];
+  int pos = start - 97;
+
+  if(!(pos >= 0 && pos < 26)){
+    pos=26;
+  }
+  struct song_node * art = searchFirst(_table[pos], _artist);
+
+  if(art){
+    printf("Artist [%s] Found!\n", _artist);
+    while (art && strcmp(art->artist,_artist)==0){
+      print_node(art);
+      art = art->next;
+    }
+    return;
+  }
+
+  printf("Artist Not Found!\n");
 }
 
 

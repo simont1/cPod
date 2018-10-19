@@ -1,5 +1,5 @@
 #ifndef SONG_NODE_H
-#define FOO_H
+#define SONG_NODE_H
 struct song_node{
   char name[100];
   char artist[100];
