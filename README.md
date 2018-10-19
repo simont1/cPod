@@ -17,12 +17,12 @@ The New Music Library
 - [X] Add song nodes.
 - [x] Search for a song given song and artist name (return a pointer).
 - [X] Search for an artist.
-- [ ] Print out all the entries under a certain letter.
-- [ ] Print out all the songs of a certain artist
-- [ ] Print out the entire library.
-- [ ] Shuffle - print out a series of randomly chosen songs.
-- [ ] Delete a song
-- [ ] Clear the library.
+- [x] Print out all the entries under a certain letter.
+- [x] Print out all the songs of a certain artist
+- [x] Print out the entire library.
+- [x] Shuffle - print out a series of randomly chosen songs.
+- [x] Delete a song
+- [x] Clear the library.
 
 ## Files Requirements:
 - [x] A .c file that contains the main function you use to test all your work
