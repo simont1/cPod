@@ -192,104 +192,41 @@ int main(){
   }
   
   printf("\n");
-  printf("======================================\n\n");
+  printf("======================================\n");
  
-
-  printf("TESTING INSERT_FRONT & PRINT_LIST\n\n");
+  printf("MUSIC LIBRARY TESTS\n");
   printf("======================================\n\n");
-
-
-  printf("TESTING INSERT_FRONT & PRINT_LIST\n\n");
-  printf("======================================\n\n");
-
-  /* /\* printf("LINKED LIST TESTS\n====================================\n\n"); *\/ */
-  /* /\* printf("Testing print_list:\n"); *\/ */
-  /* /\* print_list(p_test_1); *\/ */
-  /* /\* printf("\n====================================\n\n"); *\/ */
-
-  /* /\* /\\* printf("Testing print_node:\n"); *\\/ *\/ */
-  /* /\* /\\* print_node(p_test_1); *\\/ *\/ */
-  /* /\* /\\* printf("\n====================================\n\n"); *\\/ *\/ */
-
-
-
-  /* /\* //printf("CLEARING Linked List\n"); *\/ */
-  /* /\* //p_test_1 = free_list(p_test_1); *\/ */
-
-  /* /\* /\\* print_list(p_test_1); *\\/ *\/ */
-  /* /\* /\\* printf("%p\n", p_test_1); *\\/ *\/ */
-  /* /\* struct song_node * result = searchSpecific(p_test_1, s_3, a_3); *\/ */
-  /* /\* printf("Resulting memory location of search: %p\n", result); *\/ */
-  /* /\* printf("Song: %s\n", result->name); *\/ */
-  /* /\* printf("Artist: %s\n", result->artist); *\/ */
-
-  /* /\* struct song_node * result2 = searchSpecific(p_test_1, "apple", "banana"); *\/ */
-  /* /\* printf("%p\n", result2); *\/ */
-  /* /\* /\\* printf("%s\n", result2->name); *\\/ *\/ */
-  /* /\* /\\* printf("%s\n\n", result2->artist); *\\/ *\/ */
-
-  /* /\* struct song_node * firstSong = searchFirst(p_test_1, a_2); *\/ */
-  /* /\* printf("Resulting memory location of search: %p\n", firstSong); *\/ */
-  /* /\* printf("Song: %s\n", firstSong->name); *\/ */
-  /* /\* printf("Artist: %s\n", firstSong->artist); *\/ */
-
-
-  /* char *s_100 = "jeremy"; */
-  /* char *a_100 = "pearl jam"; */
-  /* char *s_101 = "alive"; */
-  /* char *a_101 = "pearl jam"; */
-  /* char *s_102 = "sirens"; */
-  /* char *a_102 = "pearl jam"; */
-  /* char *s_103 = "still into you"; */
-  /* char *a_103 = "paramore"; */
-  /* char *s_104 = "hallelujah"; */
-  /* char *a_104 = "pentatonix"; */
-  /* printf("=================================\n"); */
-  /* struct song_node * table[27]; */
-  /* int i = 26; */
-  /* addSong(s_1, a_1); */
-  /* addSong(s_100, a_100); */
-  /* addSong(s_101, a_101); */
-  /* addSong(s_102, a_102); */
-  /* addSong(s_103, a_103); */
-  /* addSong(s_104, a_104); */
-  /* print_library(); */
-  /* printf("======================\n"); */
-  /* addSong(s_2, a_2); */
-  /* print_letter("p"); */
-  /* printf("======================\n"); */
-  /* removeSong(s_1, a_1); */
-  /* print_library(); */
-  /* printf("======================\n"); */
-  /* printArtist(a_2); */
-  /* struct song_node * pointing1 = finder("sirens", "pearl jam"); */
-  /* struct song_node * pointing2 = finder("poopy", "pee"); */
-  /* print_node(pointing1); */
-  /* printf("\n"); */
-  /* print_node(pointing2); */
-  /* printf("\n"); */
-  /* printf("======================\n"); */
-  /* struct song_node * pointing3 = artistFinder("pentatonix"); */
-  /* print_node(pointing3); */
-  /* printf("\n"); */
-  /* printf("======================\n"); */
-  /* shuffle(); */
-  /* printf("======================\n"); */
-  /* clear_library(); */
-  /* print_library(); */
-  /* //table[0] = insert_node_alpha(0, NULL, NULL); */
-
-
-  /* printf("\n"); */
-
-
-  /* printf("\n"); */
   
-  /* // int a1 = idLetter(a_1); */
-  /* // int a2 = idLetter(a_2); */
+  printf("TESTING addSong\n\n");
+  printf("======================================\n\n");
 
-  /* print_list(table[0]); */
-
+  printf("adding artist: %s, song: %s", a_1, s_1);
+  addSong(s_1, a_1);
+  printf("\nCurrent Library:\n");
+  print_library();
+  printf("\n");
+  printf("adding artist: %s, song: %s", a_2, s_2);
+  addSong(s_2, a_2);
+  printf("\nCurrent Library:\n");
+  print_library();
+  printf("\n");
+  printf("adding artist: %s, song: %s", a_21, s_21);
+  addSong(s_21, a_21);
+  printf("\nCurrent Library:\n");
+  print_library();
+  printf("\n");
+  printf("adding artist: %s, song: %s", a_5, s_5);
+  addSong(s_5, a_5);
+  printf("\nCurrent Library:\n");
+  print_library();
+  printf("\n");
+  
+  printf("TESTING INSERT_FRONT & PRINT_LIST\n\n");
+  printf("======================================\n\n");
+  printf("TESTING INSERT_FRONT & PRINT_LIST\n\n");
+  printf("======================================\n\n");
+  printf("TESTING INSERT_FRONT & PRINT_LIST\n\n");
+  printf("======================================\n\n");
 
   return 0;
 }

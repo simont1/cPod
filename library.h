@@ -2,8 +2,6 @@
 #define LIBRARY_H
 
 
-struct song_node * findSong(struct song_node **_table, char * _artist, char *_name);
-
 struct song_node *table[27];
 void addSong(char *_song, char *_artist);
 int idLetter(char *_artist);

@@ -21,10 +21,13 @@ void removeSong(char *_song, char *_artist){
 }
 
 int idLetter(char *_artist){
-  if(strcmp(_artist, "a") % 65 > 26){
-    return strcmp(_artist, "a");
+  char start = _artist[0];
+  int pos = start - 97;
+
+  if(!(pos >= 0 && pos < 26)){
+    pos=26;
   }
-  return 26;
+  return pos;
 }
 
 struct song_node * finder(char *_song, char*_artist){
@@ -94,23 +97,6 @@ void clear_library(){
   for(int i = 0; i < 27; i++){
     table[i] = free_list(table[i]);
   }
-}
-
-
-struct song_node * findSong(struct song_node **_table, char * _artist, char *_name){
-  char start = _artist[0];
-  int pos = start - 97;
-
-  if(!(pos >= 0 && pos < 26)){
-    pos=26;
-  }
-  struct song_node * song = searchSpecific(_table[pos], _name, _artist);
-
-  if(song){
-    return song;
-  }
-  printf("Song not found");
-  return song;
 }
 
 void print_library(){
