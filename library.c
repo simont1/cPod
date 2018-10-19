@@ -16,7 +16,7 @@ void addSong(char *_song, char *_artist){
 
 void removeSong(char *_song, char *_artist){
   int x = idLetter(_artist);
-  removeNode(table[x], _artist, _song);
+  table[x] = removeNode(table[x], _artist, _song);
   numSongs -=1;
 }
 
@@ -63,7 +63,6 @@ void print_letter(char *s){
 void printArtist(char *_artist){
   int x = idLetter(_artist);
   struct song_node * temp = table[x];
-  printf("%s: " , _artist);
   while(temp){
     if(strcmp(_artist, temp->artist) == 0){
       print_node(temp);
@@ -95,6 +94,7 @@ void shuffle(){
 
 void clear_library(){
   for(int i = 0; i < 27; i++){
+
     table[i] = free_list(table[i]);
   }
 }

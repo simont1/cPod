@@ -4,19 +4,19 @@ The New Music Library
 ##Checklist
 
 ### Linked Lists
-- [] insert nodes at the front
-- [] insert nodes in order ==> alphabetical by Artist then by Song
-- [] print the entire list
-- [] find and return a pointer to a node based on artist and song name
-- [] find and return a pointer to the first song of an artist based on artist name
-- [] Return a pointer to random element in the list.
-- [] remove a single specified node from the list
-- [] free the entire list
+- [x] insert nodes at the front
+- [x] insert nodes in order ==> alphabetical by Artist then by Song
+- [x] print the entire list
+- [x] find and return a pointer to a node based on artist and song name
+- [x] find and return a pointer to the first song of an artist based on artist name
+- [x] Return a pointer to random element in the list.
+- [x] remove a single specified node from the list
+- [x] free the entire list
 
 ### Array of Linked List
-- [X] Add song nodes.
+- [x] Add song nodes.
 - [x] Search for a song given song and artist name (return a pointer).
-- [X] Search for an artist.
+- [x] Search for an artist.
 - [x] Print out all the entries under a certain letter.
 - [x] Print out all the songs of a certain artist
 - [x] Print out the entire library.
