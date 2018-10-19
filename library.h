@@ -1,5 +1,5 @@
 #ifndef LIBRARY_H
-#define FOO_H
+#define LIBRARY_H
 
 struct song_node *table[27];
 void addSong(char *_song, char *_artist);
