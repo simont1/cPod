@@ -5,11 +5,16 @@
 #include "song_node.h"
 
 
-struct song_node * addSong(struct song_node **_table, char * _artist, char *_name){
+struct song_node ** addSong(struct song_node **_table, char * _artist, char *_name){
   char start = _artist[0];
   int pos = start - 97;
 
-  return insert_node_alpha(_table[pos], _artist, _name);
+  if(!(pos >= 0 && pos < 26)){
+    pos=26;
+  }
+  _table[pos] =  insert_node_alpha(_table[pos], _artist, _name);
+  
+  return NULL;
 }
 
 int idLetter(char *_artist){

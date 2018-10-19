@@ -90,11 +90,9 @@ int main(){
   /* printf("Artist: %s\n", firstSong->artist); */
 
   printf("=================================\n");
-  struct song_node * table[26];
+  struct song_node * table[27];
 
-  addSong(table, "zpple", "cake");
-
-  table[0] = insert_node_alpha(0, "pie", "cake");
+  addSong(table, "aie", "cake");
 
 
   
